@@ -21,14 +21,17 @@ Stores data that will later be used by Process 3.
 Reads content from the file created by Process 2.
 
 Demonstrates process synchronization by waiting for Process 2 to complete before execution.
+
 4️⃣ Pipeline Sender (Process 4)
 
 Sends a message via an inter-process communication (IPC) mechanism.
+
 Simulates a producer-consumer pipeline by transmitting data to Process 5.
 
 5️⃣ Receiver (Process 5) (Depends on Process 4)
 
 Listens for and receives messages from Process 4.
+
 Prints the received message, demonstrating communication between processes.
 
 🚀 How to Run
