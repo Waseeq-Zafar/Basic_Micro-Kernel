@@ -32,8 +32,11 @@ Clone the repository
 git clone <repository-url>
 cd <repository-folder>
 
-change the FileWriterProcess.java file under the processes package (inside src -> main -> java -> org.example -> processes -> FileWriterProcess.java)
-change the String classpath under the startUserInputHandler() and change its path to the path of your target\classes (absolute path) and then you are ready to go. 
+change the FileWriterProcess.java file under the processes package
+(inside src -> main -> java -> org.example -> processes -> FileWriterProcess.java)
+change the String classpath under the startUserInputHandler()
+and change its path to the path of your target\classes (absolute path)
+and then you are ready to go. 
 
 Compile and Run the Program
 
