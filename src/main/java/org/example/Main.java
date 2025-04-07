@@ -1,8 +1,6 @@
 package org.example;
 
-import org.example.kernel.CPUScheduler;
-import org.example.kernel.MemoryManager;
-import org.example.kernel.UserProcess;
+import org.example.kernel.*;
 import org.example.processes.*;
 
 import java.util.ArrayList;
@@ -14,6 +12,7 @@ public class Main {
     public static void main(String[] args) {
 
         List<UserProcess> processes = new ArrayList<>();
+        DiskScheduler diskScheduler = new FCFS();
 
         // Create memory manager with 100 units of memory
         MemoryManager memoryManager = new MemoryManager(100); // Example total memory
@@ -21,7 +20,7 @@ public class Main {
 
         // Create processes
         UserProcess p1 = new SumCalculator(1, 10, 7);
-        UserProcess p2 = new FileWriterProcess(2, 40, 5, "output.txt");
+        UserProcess p2 = new FileWriterProcess(2, 40, 5, "output.txt",diskScheduler);
         UserProcess p3 = new FileReaderProcess(3, 20, 5, "output.txt", p2); // Dependent on p2 (FileWriterProcess)
         UserProcess p4 = new PipelineProcess(4, 10, 2);  // Sender
         UserProcess p5 = new MessageListenerProcess(5, 10, 2); // Listener
@@ -75,8 +74,8 @@ public class Main {
         }
         System.out.println("=====================================");
 
-
-
-
+        if (diskScheduler instanceof FCFS) {
+            ((FCFS) diskScheduler).printStats();
+        }
     }
 }
