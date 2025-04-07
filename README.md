@@ -39,6 +39,7 @@ Copy
 Edit
 git clone <repo-url>
 cd <repo-folder>
+
 Update FileWriterProcess.java
 
 In src/main/java/org/example/processes/FileWriterProcess.java, locate the startUserInputHandler() method and update the file path string to your absolute target/classes directory.
