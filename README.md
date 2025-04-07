@@ -1,8 +1,10 @@
 🧠 Basic Micro Kernel Simulation
+
 📌 Description
 This project simulates a basic microkernel system with inter-process communication (IPC), process scheduling, and disk scheduling. The system executes five different processes, each performing specific tasks and demonstrating fundamental operating system concepts like process dependencies, file operations, message passing, and track-based disk access.
 
 🔹 Processes Overview
+
 1️⃣ Sum Calculator (Process 1)
 Computes the sum of the first N natural numbers. Simulates a basic computation-heavy process.
 
